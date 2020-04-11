@@ -18,7 +18,7 @@ window.onload = function () {
 	var stuff = new PokemonStuff(site)
 	window.stuff = stuff
 	site.header = "Pokémon Stuff"
-	site.sections.header.url = "https://armienn.github.com/pokemon"
+	site.sections.header.url = "https://bstolle.github.com/pokemon"
 	//site.sections.navigation.navigationEntries = () => stuff.navThing()
 	site.sections.navigation.navigationSetup = () => stuff.navThing()
 	setRenderFunction(() => site.render())
