@@ -15,11 +15,13 @@ class ListSection {
 		this.nextLimit = 50
 		this.adding = false
 
+		if(true){
 		this.basePokemonColumns = [
 			new PokemonColumn("", (pokemon) => "<img src='" + PokeText.spriteName(pokemon) + "'  style='height: 2rem;'/>",
 				{
 					headerOnClick: () => stuff.headerSection.setSortingMethod("ID")
 				}),
+
 			new PokemonColumn("Pokemon", (pokemon) => PokeText.formName(pokemon) + (pokemon.nickname ? " [" + pokemon.nickname + "]" : ""),
 			{
 				headerOnClick: () => stuff.headerSection.setSortingMethod("Name")
@@ -58,7 +60,7 @@ class ListSection {
 				}),
 			new PokemonColumn("Egg groups", (pokemon) => PokeText.eggGroups(pokemon))
 		]
-
+	}
 		this.tabPokemonColumns = [
 			new PokemonColumn("", (pokemon) => "<img src='" + PokeText.spriteName(pokemon) + "' style='height: 2rem;'/>",
 				{
