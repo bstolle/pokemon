@@ -60,10 +60,13 @@ export function sprite(pokemon) {
 		color: pokemon.shiny ? "shiny" : "regular",
 		gender: (!formname && pokemon.forms && pokemon.forms[0] == "Male" && (pokemon.form.toLowerCase() == "female" || pokemon.gender == "♀" || pokemon.gender == "f")) ? "female" : "male"
 	})
-	//if(icon.found){
+	var spriteName = name;
+	if(name.startsWith("Hello")){
+		spriteName = name.replace(/ /g,"-");
+	}
 	return l("span", {
 		style: {
-			background: "url('https://raw.githubusercontent.com/msikma/pokesprite/master/pokemon-gen8/regular/"+name+".png')",
+			background: "url('https://raw.githubusercontent.com/msikma/pokesprite/master/pokemon-gen8/regular/"+spriteName+".png')",
 			//background: "url('static/pokesprite.png')",
 			//backgroundPosition: "-" + icon.data.coords.x + "px -" + icon.data.coords.y + "px",
 			//width: "40px",
@@ -74,7 +77,6 @@ export function sprite(pokemon) {
 			display: "inline-block"
 		}
 	})
-//}
 }
 
 export function imageName(pokemon) {
