@@ -63,10 +63,11 @@ export function sprite(pokemon) {
 	if(icon.found){
 	return l("span", {
 		style: {
-			background: "url('static/pokesprite.png')",
-			backgroundPosition: "-" + icon.data.coords.x + "px -" + icon.data.coords.y + "px",
-			width: "40px",
-			height: "30px",
+			background: "url('https://raw.githubusercontent.com/msikma/pokesprite/master/pokemon-gen8/regular/"+name+".png')",
+			//background: "url('static/pokesprite.png')",
+			//backgroundPosition: "-" + icon.data.coords.x + "px -" + icon.data.coords.y + "px",
+			//width: "40px",
+			//height: "30px",
 			imageRendering: "pixelated",
 			display: "inline-block"
 		}
