@@ -61,7 +61,7 @@ export function sprite(pokemon) {
 		gender: (!formname && pokemon.forms && pokemon.forms[0] == "Male" && (pokemon.form.toLowerCase() == "female" || pokemon.gender == "♀" || pokemon.gender == "f")) ? "female" : "male"
 	})
 	var spriteName = name;
-	if (name == "sirfetch'd") {
+	if (name == "Sirfetch'd") {
 		spriteName = "sirfetchd";
 		console.log("asterisk replaced");
 	}
