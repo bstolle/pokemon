@@ -68,6 +68,8 @@ export function sprite(pokemon) {
 			//backgroundPosition: "-" + icon.data.coords.x + "px -" + icon.data.coords.y + "px",
 			//width: "40px",
 			//height: "30px",
+			width: "100%",
+			height: "100%",
 			imageRendering: "pixelated",
 			display: "inline-block"
 		}
