@@ -60,7 +60,7 @@ export function sprite(pokemon) {
 		color: pokemon.shiny ? "shiny" : "regular",
 		gender: (!formname && pokemon.forms && pokemon.forms[0] == "Male" && (pokemon.form.toLowerCase() == "female" || pokemon.gender == "♀" || pokemon.gender == "f")) ? "female" : "male"
 	})
-	if(icon.found){
+	//if(icon.found){
 	return l("span", {
 		style: {
 			background: "url('https://raw.githubusercontent.com/msikma/pokesprite/master/pokemon-gen8/regular/"+name+".png')",
@@ -74,7 +74,7 @@ export function sprite(pokemon) {
 			display: "inline-block"
 		}
 	})
-}
+//}
 }
 
 export function imageName(pokemon) {
