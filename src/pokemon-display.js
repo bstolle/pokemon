@@ -61,8 +61,8 @@ export function sprite(pokemon) {
 		gender: (!formname && pokemon.forms && pokemon.forms[0] == "Male" && (pokemon.form.toLowerCase() == "female" || pokemon.gender == "♀" || pokemon.gender == "f")) ? "female" : "male"
 	})
 	var spriteName = name;
-	if (name.indexOf("'") != -1) {
-		spriteName = name.replace("'","-");
+	if (name.indexOf("/'") != -1) {
+		spriteName = name.replace("/'","-");
 		console.log("asterisk replaced");
 	}
 	if(name.startsWith("Hello")){
