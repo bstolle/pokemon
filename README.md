@@ -3,6 +3,7 @@
 # Pokédex
 
 A quick site for browsing pokemon and visualizing any pokemon lists.
+Great for visualizing data on a living pokedex
 
 ## Features
 
@@ -28,7 +29,8 @@ A quick site for browsing pokemon and visualizing any pokemon lists.
 
 ## Future Features Wishlist
 
-* Get all pkemon data updated for Galar region pokemon
+* Get all pokemon data updated for Galar region pokemon
+  * Look for a way to automate the import of pokemon data from a reliable source
 * Fix the large pokedex entry images for Galar region pokemon
 * Reorganize the left Nav
 * Restyle it to look more like an in-game pokedex
@@ -37,6 +39,7 @@ A quick site for browsing pokemon and visualizing any pokemon lists.
   * Detail page to have links on each ability
 * Add flag sprite to each language entry
 * Improve style and usability of search bar 
+* sadf ()
 
 ## How to Use with Spreadsheets
 
