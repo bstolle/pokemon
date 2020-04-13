@@ -6,7 +6,7 @@ class InfoSection {
 			this.Section(
 				(pokemon) => {
 					var rows = []
-					this.simpleRow(rows, "Types |", "<a href='https://bulbapedia.bulbagarden.net/wiki/Normal_(type)'>"PokeText.types(pokemon)"</a>")
+					this.simpleRow(rows, "Types |", "<a href='https://bulbapedia.bulbagarden.net/wiki/Normal_(type)'>",PokeText.types(pokemon),"</a>")
 					if (pokemon.nickname)
 						this.simpleRow(rows, "Nickname |", pokemon.nickname)
 					else
@@ -312,7 +312,7 @@ class InfoSection {
 	}
 
 	showSection(section) {
-		var rows = section.getRows(stuff.state.currentPokemon)
+		var rows = section.getRows(stuff.state.currentPokemon) 
 		if (!rows.length)
 			return
 		var sec = newTag("section", this.sectionsElement)
