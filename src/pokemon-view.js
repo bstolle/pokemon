@@ -256,7 +256,7 @@ function ballElement(ball, pokemon) {
 	return l("span", {
 		style: {
 			background: "url('static/pokesprite.png')",
-			//backgroundPosition: "-" + icon.data.coords.x + "px -" + icon.data.coords.y + "px",
+			backgroundPosition: "-" + icon.data.coords.x + "px -" + icon.data.coords.y + "px",
 			width: "32px",
 			height: "32px",
 			imageRendering: "pixelated",

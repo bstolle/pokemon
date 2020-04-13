@@ -308,7 +308,7 @@ class InfoSection {
 
 	showImage(pokemon) {
 		var url = "http://bulbapedia.bulbagarden.net/wiki/" + pokemon.name + "_(Pok%C3%A9mon)"
-		this.imageElement.innerHTML = "<a href='" + url + "'><img src='" + PokeText.imageName(pokemon) + "' style='height: 13rem;'/></a>"
+		this.imageElement.innerHTML = "<a href='" + url + "'><img src='" + PokeText.imageName(pokemon) + "' style='height: 14rem;'/></a>"
 	}
 
 	showSection(section) {
