@@ -176,7 +176,7 @@ function typeEntries(pokemon) {
 
 function mainInfoEntries(pokemon) {
 	const entries = []
-	entries.push("Types", typesText(pokemon))
+	entries.push("Types for now", typesText(pokemon))
 	if (pokemon.nickname)
 		entries.push("Nickname", pokemon.nickname)
 	else
