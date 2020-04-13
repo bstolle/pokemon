@@ -25,7 +25,7 @@ export class PokemonView {
 			upperContent: (pokemon) => [l("div", { style: { padding: "0.5rem" } }, pokemon.notes || pokemon.description)],
 			gridContent: (pokemon) => [
 				l("img", {
-					style: { gridArea: "span 7", height: "13rem", margin: "0.5rem", justifySelf: "center" },
+					style: { gridArea: "span 7", height: "15rem", margin: "0.5rem", justifySelf: "center" },
 					src: imageName(pokemon)
 				}), ,
 				...SelectionView.entries({ span: 7 }, ...mainInfoEntries(pokemon)),
