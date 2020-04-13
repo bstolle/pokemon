@@ -65,7 +65,7 @@ class InfoSection {
 					this.statRow(rows, pokemon, "HP |", "hp")
 					this.statRow(rows, pokemon, "Attack |", "atk")
 					this.statRow(rows, pokemon, "Defense |", "def")
-					this.statRow(rows, pokemon, "Sp. Atk |", "spa")
+					this.statRow(rows, pokemon, "Special Attack |", "spa")
 					this.statRow(rows, pokemon, "Sp. Def |", "spd")
 					this.statRow(rows, pokemon, "Speed |", "spe")
 					return rows

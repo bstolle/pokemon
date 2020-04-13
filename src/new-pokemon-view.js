@@ -1,3 +1,13 @@
+// UNUSED 
+// UNUSED 
+// UNUSED 
+// UNUSED 
+// UNUSED 
+// UNUSED 
+// UNUSED 
+// UNUSED 
+// UNUSED 
+
 import { Component, update, l } from "../../archive/arf/arf.js"
 import iconButton, { acceptIcon, crossIcon } from "../../archive/search/icons.js"
 import { Pokemon } from "./pokemon-data.js"
