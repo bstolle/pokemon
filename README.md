@@ -1,6 +1,8 @@
-# Pokémon Stuff
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-A site for browsing Pokémon (all base Pokémon, as well as Pokémon loaded from Google Sheets collections or other resources) with powerful searching, filtering and sorting features
+# Pokédex
+
+A quick site for browsing pokemon and visualizing any pokemon lists.
 
 ## Features
 
@@ -17,6 +19,24 @@ A site for browsing Pokémon (all base Pokémon, as well as Pokémon loaded from
 * Link to [a](https://armienn.github.io/pokemon/#Magearna) [specific](https://armienn.github.io/pokemon/#123) [Pokémon](https://armienn.github.io/pokemon/#nidoran-m)
 * Link to your collection [in a spreadsheet](https://armienn.github.io/pokemon/?1FOnsr7np65g0RhTETo1gMS298alHhTNwngT_8oYrZvI#2), [a json file](https://armienn.github.io/pokemon/?json:gist.githubusercontent.com/Armienn/dbcc734e78c27eee1c6590f1cd11fd17/raw/e30d8b5a6330d5affbcb3512cd2399ed5603aaee/test-json-pokemons.json), [a script](https://armienn.github.io/pokemon/?script:gist.githubusercontent.com/Armienn/27b4759d86c33542656f255efd1e50af/raw/47e287512645df0a4f75a515d48f9268a7340604/test-pokemons.js) et cetera
 * Faster loading than sharing a Google Sheets document
+
+## Recent Updates
+
+* Began adding the Galar region pokemon to the list. (Names and sprites are accruate. Any details are not)
+* Fixed the favicon that was not hooked up
+
+
+## Future Features Wishlist
+
+* Get all pkemon data updated for Galar region pokemon
+* Fix the large pokedex entry images for Galar region pokemon
+* Reorganize the left Nav
+* Restyle it to look more like an in-game pokedex
+* Add links to reliable pokemon resources like **Serebii**, **Smogon**, and **Bulbapedia**
+  * Detail page to have links on each type
+  * Detail page to have links on each ability
+* Add flag sprite to each language entry
+* Improve style and usability of search bar 
 
 ## How to Use with Spreadsheets
 
@@ -79,6 +99,20 @@ For developers interested in the code: I cleaned up the code at one point, but t
 
 This project also provides various Pokémon data in json format, found in data-sumo/pokemons.json, data-sumo/moves.json, data-sumo/abilities.json, data-sumo/natures.json, data-sumo/types.json and data-sumo/egg-groups.json. There's no guarantee about correctness or updatedness, and no documentation, but it's there for those who want it.
 
-Thanks to [richi3f](https://github.com/richi3f) for the inspiration for this site, and for the initial template spreadsheet.
+
+## Authors
+
+* **Armienn** - Original author (project last updated 2 years ago)
+* **Benjamin Stolle** - Picked up to enhance the original
+
+
+## Acknowledgments
+
+* Thanks to [richi3f](https://github.com/richi3f) for the inspiration for this site, and for the initial template spreadsheet.
+* VS Code was used to update this codebase (bstolle's contributions)
+
+## License
+
+This project is licensed under the BSD 3-Clause - see the [LICENSE.md](LICENSE.md) file for details
 
 Pokémon &copy; Nintendo / Game Freak, 1995-2017.
