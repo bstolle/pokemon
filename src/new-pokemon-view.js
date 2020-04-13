@@ -43,7 +43,7 @@ export class NewPokemonView extends Component {
 			),
 			this.pokemonData ?
 				l("img", {
-					style: { height: "13rem", margin: "0.5rem", justifySelf: "center" },
+					style: { height: "17rem", margin: "0.5rem", justifySelf: "center" },
 					src: imageName(this.pokemonData)
 				}) :
 				undefined
