@@ -165,89 +165,89 @@ class PokemonStuff {
 				}
 			}
 		}
-		setup["Game Data"] = {}
-		setup["Game Data"][""] = {}
-		setup["Game Data"][""]["Pokémon"] = {
-			action: () => {
-				this.site.setCollection(this.data.pokemons, "pokemon")
-				this.selectedLocal = undefined
-				this.setLocation("game-pokemon")
-				update()
-			},
-			selected: this.site.sections.collection.collection == this.data.pokemons
-		}
-		setup["Game Data"][""]["Moves"] = {
-			action: () => {
-				this.site.setCollection(this.data.movesList, "moves")
-				this.selectedLocal = undefined
-				this.setLocation("game-moves")
-				update()
-			},
-			selected: this.site.sections.collection.collection == this.data.movesList
-		}
-		if (this.localCollectionGroup.tabs.length)
-			setup["Game Data"]["Local"] = {}
-		for (let tab of this.localCollectionGroup.tabs) {
-			setup["Game Data"]["Local"][tab.title] = {
-				action: () => {
-					this.selectedLocal = tab
-					this.site.setCollection(tab.pokemons, "pokemonIndividuals")
-					update()
-				},
-				selected: this.site.sections.collection.collection == tab.pokemons
-			}
-		}
-		setup["Game Data"]["Options"] = {}
-		setup["Game Data"]["Options"]["Import"] = {
-			action: () => {
-				this.site.show(new ImportView(this.site, (collection, type) => {
-					let parsedCollection = collection.map(e => type === "JSON" ? new Pokemon(e) : pokemonFromUnsanitised(e)).filter(e => e)
-					if (collection.length == 0)
-						parsedCollection = collection.map(e => pokemonFromUnsanitised(e)).filter(e => e)
-					const tab = this.localCollectionGroup.addTab("Imported", parsedCollection)
-					this.site.setCollection(tab.pokemons, "pokemonIndividuals")
-					this.site.clearSelection()
-					this.localCollectionGroup.saveToLocalStorage()
-					update()
-				}))
-			}
-		}
-		setup["Game Data"]["Options"]["Export"] = {
-			action: () => {
-				this.site.show(new ExportView(this.site, (collection, type) => {
-					if (type == "raw")
-						return collection.map(e => {
-							const model = {}
-							for (var key in e)
-								model[key] = e[key]
-							delete model.base
-							return model
-						})
-					return collection
-				}))
-			}
-		}
-		setup["Game Data"]["Options"]["Add Collection"] = {
-			action: () => {
-				this.site.show(new CollectionEditor("New Collection",
-					(title) => {
-						const tab = this.localCollectionGroup.addTab(title, [])
-						this.site.setCollection(tab.pokemons, "pokemonIndividuals")
-						this.site.clearSelection()
-						this.localCollectionGroup.saveToLocalStorage()
-						update()
-					},
-					() => {
-						this.site.clearSelection()
-						update()
-					},
-					() => {
-						this.site.clearSelection()
-						update()
-					}
-				))
-			}
-		}
+		// setup["Game Data"] = {}
+		// setup["Game Data"][""] = {}
+		// setup["Game Data"][""]["Pokémon"] = {
+		// 	action: () => {
+		// 		this.site.setCollection(this.data.pokemons, "pokemon")
+		// 		this.selectedLocal = undefined
+		// 		this.setLocation("game-pokemon")
+		// 		update()
+		// 	},
+		// 	selected: this.site.sections.collection.collection == this.data.pokemons
+		// }
+		// setup["Game Data"][""]["Moves"] = {
+		// 	action: () => {
+		// 		this.site.setCollection(this.data.movesList, "moves")
+		// 		this.selectedLocal = undefined
+		// 		this.setLocation("game-moves")
+		// 		update()
+		// 	},
+		// 	selected: this.site.sections.collection.collection == this.data.movesList
+		// }
+		// if (this.localCollectionGroup.tabs.length)
+		// 	setup["Game Data"]["Local"] = {}
+		// for (let tab of this.localCollectionGroup.tabs) {
+		// 	setup["Game Data"]["Local"][tab.title] = {
+		// 		action: () => {
+		// 			this.selectedLocal = tab
+		// 			this.site.setCollection(tab.pokemons, "pokemonIndividuals")
+		// 			update()
+		// 		},
+		// 		selected: this.site.sections.collection.collection == tab.pokemons
+		// 	}
+		// }
+		// setup["Game Data"]["Options"] = {}
+		// setup["Game Data"]["Options"]["Import"] = {
+		// 	action: () => {
+		// 		this.site.show(new ImportView(this.site, (collection, type) => {
+		// 			let parsedCollection = collection.map(e => type === "JSON" ? new Pokemon(e) : pokemonFromUnsanitised(e)).filter(e => e)
+		// 			if (collection.length == 0)
+		// 				parsedCollection = collection.map(e => pokemonFromUnsanitised(e)).filter(e => e)
+		// 			const tab = this.localCollectionGroup.addTab("Imported", parsedCollection)
+		// 			this.site.setCollection(tab.pokemons, "pokemonIndividuals")
+		// 			this.site.clearSelection()
+		// 			this.localCollectionGroup.saveToLocalStorage()
+		// 			update()
+		// 		}))
+		// 	}
+		// }
+		// setup["Game Data"]["Options"]["Export"] = {
+		// 	action: () => {
+		// 		this.site.show(new ExportView(this.site, (collection, type) => {
+		// 			if (type == "raw")
+		// 				return collection.map(e => {
+		// 					const model = {}
+		// 					for (var key in e)
+		// 						model[key] = e[key]
+		// 					delete model.base
+		// 					return model
+		// 				})
+		// 			return collection
+		// 		}))
+		// 	}
+		// }
+		// setup["Game Data"]["Options"]["Add Collection"] = {
+		// 	action: () => {
+		// 		this.site.show(new CollectionEditor("New Collection",
+		// 			(title) => {
+		// 				const tab = this.localCollectionGroup.addTab(title, [])
+		// 				this.site.setCollection(tab.pokemons, "pokemonIndividuals")
+		// 				this.site.clearSelection()
+		// 				this.localCollectionGroup.saveToLocalStorage()
+		// 				update()
+		// 			},
+		// 			() => {
+		// 				this.site.clearSelection()
+		// 				update()
+		// 			},
+		// 			() => {
+		// 				this.site.clearSelection()
+		// 				update()
+		// 			}
+		// 		))
+		// 	}
+		// }
 		if (this.selectedLocal) {
 			setup["Game Data"][this.selectedLocal.title] = {}
 			setup["Game Data"][this.selectedLocal.title]["Add Pokémon"] = {

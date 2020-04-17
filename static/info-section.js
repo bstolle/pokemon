@@ -6,7 +6,7 @@ class InfoSection {
 			this.Section(
 				(pokemon) => {
 					var rows = []
-					this.simpleRow(rows, "Types |", "<a href='https://bulbapedia.bulbagarden.net/wiki/Normal_(type)'>"+PokeText.types(pokemon)+"</a>")
+					this.simpleLinkRow(rows, "Types |", PokeText.types(pokemon))
 					if (pokemon.nickname)
 						this.simpleRow(rows, "Nickname |", pokemon.nickname)
 					else
@@ -365,6 +365,12 @@ class InfoSection {
 		return { tag: "td", style: style, content: content, ...options }
 	}
 
+	LinkContent(content, style = "left", options = {}) {
+		if (typeof style == "string")
+			return { tag: "td", style: { textAlign: style }, content: content, ...options }
+		return { tag: "td", style: style, content: content, ...options }
+	}
+
 	showMoves(pokemon) {
 		var moveGroups = {}
 		for (var i in pokemon.moves) {
@@ -480,6 +486,13 @@ class InfoSection {
 		rows.push([
 			this.Title(title),
 			this.Content(content)])
+	}
+
+	simpleLinkRow(rows, title, content) {
+		rows.push([
+			this.Title(title),
+			//this.Content(content)
+		])
 	}
 
 	// stat section stuff
