@@ -368,7 +368,7 @@ class StatBar extends Component {
 				marginTop: "0.5rem"
 			},
 			".base-bar": {
-				backgroundColor: "#00ae00",
+				backgroundColor: "#FFFFFF",
 				marginLeft: "0.5rem"
 			},
 			".iv-bar": {
