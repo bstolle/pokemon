@@ -100,7 +100,9 @@ th, li{
 }
 
 thead{
-    background-color: #929292d6
+    /* background-color: #929292d6; */
+    background-color: #FFF;
+    color: black;
 }
 
 #filter-list, #filter-individual-list {

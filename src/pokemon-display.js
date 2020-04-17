@@ -99,7 +99,7 @@ export function imageName(pokemon) {
 			case 521:
 			case 592:
 			case 593:
-			case 668:
+			case 668:F
 			case 678:
 				gender = "female/"
 		}
