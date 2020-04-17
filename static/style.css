@@ -39,6 +39,10 @@ html{
     }
 }
 
+div.layout[site-SearchSite] {
+    background-color: #fff;
+}
+
 article{
     width: 100vw;
     height: 100vh;
