@@ -7,7 +7,7 @@ class Settings {
 			day: ["whitesmoke", "black", "rgb(224, 54, 34)"],
 			custom: ["#222", "#eee", "#c00"]
 		}
-		this.colorScheme = "night"
+		this.colorScheme = "day"
 		this.showBreedables = false
 		this.tableSetup = this.defaultTableSetup()
 	}
