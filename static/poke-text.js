@@ -90,7 +90,7 @@ class PokeText {
 	}
 
 	static type(type) {
-		return "<span style='color:" + stuff.data.typeColors[type] + ";'>" + type + "</span>"
+		return "<span class='type' style='color:" + stuff.data.typeColors[type] + ";'>" + type + "</span>"
 	}
 
 	static types(pokemon) {
