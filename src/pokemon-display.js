@@ -132,7 +132,7 @@ export function defenseText(defense) {
 }
 
 export function typeText(type) {
-	return l("span", { style: { color: stuff.data.typeColors[type] } }, type)
+	return l("span", { class: 'type', style: { color: stuff.data.typeColors[type] } }, type)
 }
 
 export function typesText(pokemon) {
