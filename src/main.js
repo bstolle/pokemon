@@ -248,64 +248,64 @@ class PokemonStuff {
 		// 		))
 		// 	}
 		// }
-		if (this.selectedLocal) {
-			setup["Game Data"][this.selectedLocal.title] = {}
-			setup["Game Data"][this.selectedLocal.title]["Add Pokémon"] = {
-				action: () => {
-					const tab = this.selectedLocal
-					this.site.show(new NewPokemonView(tab.title,
-						(pokemon) => {
-							this.site.clearSelection()
-							if (!pokemon)
-								return update()
-							tab.pokemons.push(pokemon)
-							this.localCollectionGroup.saveToLocalStorage()
-							this.site.showModel(pokemon, "pokemonIndividuals", tab.pokemons)
-							this.site.sections.selection.content.switchToEdit()
-							update()
-						},
-						() => {
-							this.site.clearSelection()
-							update()
-						}
-					))
-				}
-			}
-			setup["Game Data"][this.selectedLocal.title]["Edit collection"] = {
-				action: () => {
-					const tab = this.selectedLocal
-					this.site.show(new CollectionEditor(tab.title,
-						(title) => {
-							tab.title = title
-							this.site.clearSelection()
-							this.localCollectionGroup.saveToLocalStorage()
-							update()
-						},
-						() => {
-							this.site.clearSelection()
-							update()
-						},
-						() => {
-							this.site.clearSelection()
-							this.localCollectionGroup.remove(tab)
-							this.localCollectionGroup.saveToLocalStorage()
-							update()
-						}
-					))
-				}
-			}
-			if (this.selectedLocal.title !== "Imported" && this.localCollectionGroup.tabs.find(e => e.title == "Imported"))
-				setup["Game Data"][this.selectedLocal.title]["Copy from Imported"] = {
-					action: () => {
-						const imported = this.localCollectionGroup.tabs.find(e => e.title == "Imported")
-						this.selectedLocal.pokemons.push(...imported.pokemons)
-						this.localCollectionGroup.remove(imported)
-						this.site.engine.changed(true)
-						this.localCollectionGroup.saveToLocalStorage()
-						update()
-					}
-				}
-		}
+		// if (this.selectedLocal) {
+		// 	setup["Game Data"][this.selectedLocal.title] = {}
+		// 	setup["Game Data"][this.selectedLocal.title]["Add Pokémon"] = {
+		// 		action: () => {
+		// 			const tab = this.selectedLocal
+		// 			this.site.show(new NewPokemonView(tab.title,
+		// 				(pokemon) => {
+		// 					this.site.clearSelection()
+		// 					if (!pokemon)
+		// 						return update()
+		// 					tab.pokemons.push(pokemon)
+		// 					this.localCollectionGroup.saveToLocalStorage()
+		// 					this.site.showModel(pokemon, "pokemonIndividuals", tab.pokemons)
+		// 					this.site.sections.selection.content.switchToEdit()
+		// 					update()
+		// 				},
+		// 				() => {
+		// 					this.site.clearSelection()
+		// 					update()
+		// 				}
+		// 			))
+		// 		}
+		// 	}
+		// 	setup["Game Data"][this.selectedLocal.title]["Edit collection"] = {
+		// 		action: () => {
+		// 			const tab = this.selectedLocal
+		// 			this.site.show(new CollectionEditor(tab.title,
+		// 				(title) => {
+		// 					tab.title = title
+		// 					this.site.clearSelection()
+		// 					this.localCollectionGroup.saveToLocalStorage()
+		// 					update()
+		// 				},
+		// 				() => {
+		// 					this.site.clearSelection()
+		// 					update()
+		// 				},
+		// 				() => {
+		// 					this.site.clearSelection()
+		// 					this.localCollectionGroup.remove(tab)
+		// 					this.localCollectionGroup.saveToLocalStorage()
+		// 					update()
+		// 				}
+		// 			))
+		// 		}
+		// 	}
+		// 	if (this.selectedLocal.title !== "Imported" && this.localCollectionGroup.tabs.find(e => e.title == "Imported"))
+		// 		setup["Game Data"][this.selectedLocal.title]["Copy from Imported"] = {
+		// 			action: () => {
+		// 				const imported = this.localCollectionGroup.tabs.find(e => e.title == "Imported")
+		// 				this.selectedLocal.pokemons.push(...imported.pokemons)
+		// 				this.localCollectionGroup.remove(imported)
+		// 				this.site.engine.changed(true)
+		// 				this.localCollectionGroup.saveToLocalStorage()
+		// 				update()
+		// 			}
+		// 		}
+		// }
 		return setup
 	}
 
